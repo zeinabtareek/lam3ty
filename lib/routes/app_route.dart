@@ -6,6 +6,7 @@ class AppRoutes {
   static const homeScreen = '/Home_Screen';
   static const registerScreen = '/Register_Screen';
   static const productDetailsScreen = '/Product_Details_Screen';
-   static const profileScreen = '/Profile_Screen';
-
+ static const profileScreen = '/Profile_Screen';
+ static const otpScreen = '/Otp_Screen';
+ static const carsScreen = '/Cars_Screen';
 }

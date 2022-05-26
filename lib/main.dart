@@ -28,9 +28,10 @@ class MyApp extends StatelessWidget {
           builder: (BuildContext, Widget ) => GetMaterialApp(
             debugShowCheckedModeBanner: false,
             theme: ThemeData(
-              appBarTheme: const AppBarTheme(backgroundColor: K.kBackGroundColor),
-              scaffoldBackgroundColor: K.kBackGroundColor,
+              // appBarTheme: const AppBarTheme(backgroundColor: K.whiteColor),
+              // scaffoldBackgroundColor: K.whiteColor,
             ),
+            // initialRoute: AppRoutes.homeNave,
             initialRoute: AppRoutes.splashScreen,
             getPages: AppScreens.screens,
           ),

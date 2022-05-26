@@ -1,11 +1,10 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import '../../componant/home_story.dart';
+import 'package:lam3ty/screens/login_screen/login_screen.dart';
+import 'package:lam3ty/screens/otp_screen/otp_screen.dart';
 import '../../constant.dart';
-import '../home/home_screen.dart';
-import '../profile_screen/profile_screen.dart';
+import '../cars_screen/cars_screen.dart';
 import 'controller/home_controller.dart';
 
 class Home extends StatelessWidget {
@@ -14,85 +13,76 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final List<Widget> body = [
-      HomeScreen(),
-      HomeScreen(),
-      HomeScreen(),
-      HomeScreen(),
-      // ProfileScreen(),
-
+      OtpScreen(),
+      LoginScreen(),
+      CarsScreen(),
+      LoginScreen(),
     ];
     final _controller = Get.put(HomeController());
     return Scaffold(
-      backgroundColor:K.kBackGroundColor,
-        body: Obx(() => Center(
-              child: body.elementAt(_controller.selectIndex),
-            )),
-        bottomNavigationBar: Obx(() =>
-                ClipRRect(
-                borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(25), topRight: Radius.circular(25)),
-                child: BottomNavigationBar(
-                  items:     <BottomNavigationBarItem>[
-                    BottomNavigationBarItem(
-
-                      icon: Icon(Icons.home_outlined,size: 30.sp,),
-                      label: '',
-
-                    ),
-                    BottomNavigationBarItem(
-                      icon: Icon(Icons.shopping_cart_outlined,size: 30.sp,),
-                      label: '',
-
-                    ),
-
-                    BottomNavigationBarItem(
-                      icon: Icon(Icons.favorite_outline_rounded,size: 30.sp,),
-                      label: ''
-                    ),
-                    BottomNavigationBarItem(
-                      icon: UserAvatar(size: 40, isNav: true, image: 'assets/images/user_image.png',),
-                        // color: Color(0xFF3A5A98),
-                      // ),
-                     label: ''
-                    ),
-                  ],
-                  selectedItemColor: K.mainColor,
-                  unselectedItemColor: K.whiteColor,
-                  backgroundColor:K.searchColor,
-                  type: BottomNavigationBarType.fixed,
-                  currentIndex: _controller.selectIndex,
-                  onTap: (index) {_controller.select(index);},
-
-
-
-
+      backgroundColor: K.whiteColor,
+      body: Obx(() => Center(
+            child: body.elementAt(_controller.selectIndex),
+          )),
+      bottomNavigationBar: Obx(
+        () => Container(
+            decoration: const BoxDecoration(
+              boxShadow: <BoxShadow>[
+                BoxShadow(
+                  color: K.secmainColor,
+                  blurRadius: 6,
+                ),
+              ],
+            ),
+            child: ClipRRect(
+              borderRadius: const BorderRadius.only(
+                  topLeft: Radius.circular(25), topRight: Radius.circular(25)),
+              child: BottomNavigationBar(
+                elevation: 3,
+                items: <BottomNavigationBarItem>[
+                  BottomNavigationBarItem(
+                    icon:   Image.asset('assets/images/person.png',
+                        height: 25,
+                        color: _controller.selectIndex == 0
+                            ? K.mainColor
+                            : K.blackColor),
+                    label: 'الحساب',
+                  ),
+                  BottomNavigationBarItem(
+                    icon:   Image.asset('assets/images/book.png',
+                        height: 27,
+                        color: _controller.selectIndex == 1
+                            ? K.mainColor
+                            : K.blackColor),
+                    label: 'الحجز',
+                  ),
+                  BottomNavigationBarItem(
+                      icon:   Image.asset('assets/images/cars.png',
+                          height: 22,
+                          color: _controller.selectIndex == 2
+                              ? K.mainColor
+                              : K.blackColor.withOpacity(.5)),
+                      label: 'المركبات'),
+                  BottomNavigationBarItem(
+                      icon: Image.asset('assets/images/home.png',
+                          height: 25,
+                          color: _controller.selectIndex == 3
+                              ? K.mainColor
+                              : K.blackColor),
+                      label: 'الرئيسية'),
+                ],
+                selectedItemColor: K.mainColor,
+                unselectedItemColor: K.blackColor,
+                backgroundColor: K.whiteColor,
+                type: BottomNavigationBarType.fixed,
+                currentIndex: _controller.selectIndex,
+                onTap: (index) {
+                  _controller.select(index);
+                  // _controller.tappedIcon(index);
+                },
               ),
-
-            )
-
-
-        ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: (){ },
-        tooltip: 'Camera',
-        child: Container(
-          width: 60,
-          height: 60,
-          child: Icon(
-            Icons.add,
-            size: 40,
-          ),
-          decoration: BoxDecoration(
-              shape: BoxShape.circle,
-    gradient: LinearGradient(colors: [K.secmainColor, K.mainColor],
-          ),
-          ),
-        ),
-
-        backgroundColor:K.searchColor,
+            ),),
       ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-
     );
   }
 }

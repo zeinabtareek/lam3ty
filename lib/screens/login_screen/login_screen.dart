@@ -130,7 +130,7 @@ class LoginScreen extends StatelessWidget {
   getBoxShadow() {
     return BoxDecoration(
         borderRadius: BorderRadius.circular(5.0),
-        color: K.splashStackColor.withOpacity(.5),
+        color: K.secmainColor.withOpacity(.5),
         border: Border.all(color: K.whiteColor.withOpacity(.3)));
   }
   getInoutDecoration(hint, ) {
