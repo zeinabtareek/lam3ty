@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:lam3ty/screens/otp_screen/controller/otp_controller.dart';
 
 import '../constant.dart';
 
@@ -15,6 +16,7 @@ class Button extends StatelessWidget {
       this.onPressed,
     this.isLoggin,
     Key? key,
+     OtpController ?controller,
   }) : super(key: key);
 
   @override

@@ -109,7 +109,8 @@ class RegisterScreen extends StatelessWidget {
                       text: 'تسجيل  ',
                       isLoggin: true,
                       onPressed: () {
-                        Get.offAll(LoginScreen());
+                        Get.toNamed(AppRoutes.otpScreen);
+
                       },
                     ),
                     Center(
@@ -134,7 +135,7 @@ class RegisterScreen extends StatelessWidget {
   getBoxShadow() {
     return BoxDecoration(
         borderRadius: BorderRadius.circular(5.0),
-        color: K.splashStackColor.withOpacity(1),
+        color: K.secmainColor.withOpacity(1),
         border: Border.all(color: K.whiteColor.withOpacity(.3)));
   }
 

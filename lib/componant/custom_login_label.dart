@@ -22,14 +22,6 @@ class LoginLabel extends StatelessWidget {
           style:   TextStyle(color:K.blackColor ,
               fontSize: 20.sp, fontWeight: FontWeight.normal, height: .5),
         ),
-
-        // Text(text!,style: TextStyle(
-        //     fontFamily: "Raleway",
-        //     fontSize: 20.sp,
-        //     fontWeight: FontWeight.w600,
-        //     color: K.mainColor
-        // ),
-        // ),
         Padding(
           padding: const EdgeInsets.only(top: 10.0,bottom: 10.0),
           child: Icon(icon,color: K.mainColor,size: 25,),
