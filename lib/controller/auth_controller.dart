@@ -2,5 +2,5 @@
 
 
 class AuthController extends GetxController{
-
+//test push
  }
