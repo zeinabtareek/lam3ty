@@ -9,8 +9,9 @@ class FixedRichText extends StatelessWidget {
   final String? leftLabel;
   final String? rightLabel;
   final Function()? onTab;
+  final bool ? isForgetPassScreen;
 
-  const FixedRichText({Key? key, this.leftLabel, this.rightLabel, this.onTab})
+  const FixedRichText({Key? key, this.leftLabel, this.rightLabel, this.onTab,this.isForgetPassScreen})
       : super(key: key);
 
   @override
@@ -25,7 +26,7 @@ class FixedRichText extends StatelessWidget {
               TextSpan(
                 recognizer: TapGestureRecognizer()..onTap = onTab,
                 text: rightLabel,
-                style:  TextStyle(fontSize: 21.sp, color: K.mainColor,),
+                style:  TextStyle(fontSize: isForgetPassScreen==true?25.sp:21.sp, color: K.mainColor,fontWeight: isForgetPassScreen==true?FontWeight.bold:FontWeight.normal),
               )
             ])));
   }

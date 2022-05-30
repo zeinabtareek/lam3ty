@@ -42,7 +42,7 @@ class OtpScreen extends StatelessWidget {
                 K.sizedBoxH,
                   Text(controller.otp.value.isEmpty? 'الرجاء ادخال رمز التأكيد':
                  '  الرمز هو  ${ controller.otp.value}  ' ,),
-                K.sizedBoxH,
+
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
 
@@ -51,7 +51,8 @@ class OtpScreen extends StatelessWidget {
                     OtpInput(controller.fieldTwo, false, 60.h, 89.w,),
                     OtpInput(controller.fieldThree, false, 60.h, 89.w,),
                     OtpInput(controller.fieldFour, false, 60.h, 89.w,)
-                  ],), K.sizedBoxH,
+                  ],),
+                Spacer(),
                 Button(
                   controller: controller,
                   onPressed: (){ controller.otp.value = controller.fieldOne.text +
@@ -63,7 +64,8 @@ class OtpScreen extends StatelessWidget {
                   print(controller.otp.value);},
                   text: 'تأكيد', size: K.width,
                   isLoggin: true,
-                ), K.sizedBoxH,
+                ),
+
 
                 Center(
                   child:   FixedRichText(
@@ -75,7 +77,8 @@ class OtpScreen extends StatelessWidget {
                     },
 
                   ),
-                ),
+                ),                Spacer(),
+
               ],
             ),
         ),
