@@ -11,6 +11,7 @@ class K {
   static const grayColor = Color(0xFF999999);
   static const blackColor = Colors.black;
   static const whiteColor = Colors.white;
+  static const TypeColor = Color(0xFF646464);
   static final width = Get.width;
   static final height = Get.height;
 

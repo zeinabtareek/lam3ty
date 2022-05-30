@@ -6,7 +6,8 @@ class CarsScreenController extends  GetxController{
   final carType=''.obs;
   final carModel=''.obs;
   final carImage=''.obs;
-  final carColor=Colors.black.obs;
+  final carColor=''.obs;
+
 
 
 }

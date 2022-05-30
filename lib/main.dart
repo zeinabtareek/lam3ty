@@ -27,12 +27,10 @@ class MyApp extends StatelessWidget {
           designSize: new Size(428, 926),
           builder: (BuildContext, Widget ) => GetMaterialApp(
             debugShowCheckedModeBanner: false,
-            theme: ThemeData(
-              // appBarTheme: const AppBarTheme(backgroundColor: K.whiteColor),
-              // scaffoldBackgroundColor: K.whiteColor,
-            ),
-            // initialRoute: AppRoutes.homeNave,
-            initialRoute: AppRoutes.splashScreen,
+            theme: ThemeData(  ),
+
+            initialRoute: AppRoutes.homeNave,
+            // initialRoute: AppRoutes.splashScreen,
             getPages: AppScreens.screens,
           ),
         ),

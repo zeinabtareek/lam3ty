@@ -3,8 +3,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:lam3ty/screens/login_screen/login_screen.dart';
 import 'package:lam3ty/screens/otp_screen/otp_screen.dart';
+import 'package:lam3ty/screens/profile_screen/profile_screen.dart';
 import '../../constant.dart';
 import '../cars_screen/cars_screen.dart';
+import '../reservations_screen/reservations_screen.dart';
 import 'controller/home_controller.dart';
 
 class Home extends StatelessWidget {
@@ -13,8 +15,8 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final List<Widget> body = [
-      OtpScreen(),
-      LoginScreen(),
+      ProfileScreen(),
+      ReservationsScreen(),
       CarsScreen(),
       LoginScreen(),
     ];

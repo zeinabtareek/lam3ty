@@ -9,4 +9,11 @@ class AppRoutes {
  static const profileScreen = '/Profile_Screen';
  static const otpScreen = '/Otp_Screen';
  static const carsScreen = '/Cars_Screen';
+ static const reservationsScreen = '/Reservations_Screen';
+ static const requestForgetPassScreen = '/Request_Forget_Password_Screen';
+ static const forgetPassScreen = '/Forget_Password_Screen';
+ static const changePassScreen = '/Change_Password_Screen';
+ static const updateProfileScreen = '/Update_Profile_Screen';
+ static const notificationsScreen = '/Notifications_Screen';
+ static const termsScreen = '/Terms_Screen';
 }
