@@ -39,15 +39,13 @@ class CustomImageRow extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-
               Text(text,
                 style: TextStyle(
-                  fontSize: 20.sp,
+                  fontSize: 25.sp,
                   color: K.mainColor,
-                  fontWeight: FontWeight.bold,
-                ),
+                  fontWeight: FontWeight.bold,),
               ),IconButton(onPressed: onPressed, icon:
-              Icon(Icons.arrow_forward),),
+              const Icon(Icons.arrow_forward),),
             ],
           ),
         ),
