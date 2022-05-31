@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
           builder: (BuildContext, Widget ) => GetMaterialApp(
             debugShowCheckedModeBanner: false,
             theme: ThemeData(  ),
-            initialRoute: AppRoutes.homeNave,
+            initialRoute: AppRoutes.helpScreen,
             // initialRoute: AppRoutes.splashScreen,
             getPages: AppScreens.screens,
           ),

@@ -7,6 +7,7 @@ import '../screens/first_splash_screen/first_splash_screen.dart';
 import '../screens/forget_password_scrren/change_password.dart';
 import '../screens/forget_password_scrren/forget_password_screen.dart';
 import '../screens/forget_password_scrren/request_forget_password.dart';
+import '../screens/help_screen/help_screen.dart';
 import '../screens/home/home_screen.dart';
 import '../screens/home_navigation_bar/home.dart';
 import '../screens/login_screen/login_screen.dart';
@@ -15,8 +16,10 @@ import '../screens/otp_screen/otp_screen.dart';
 import '../screens/profile_screen/profile_screen.dart';
 import '../screens/register_screen/register_screen.dart';
 import '../screens/reservations_screen/reservations_screen.dart';
+import '../screens/setteing_screen/setting_screen.dart';
 import '../screens/terms_screen/terms_screen.dart';
 import '../screens/update_profile/update_profile.dart';
+import '../screens/wallet_screen/wallet_screen.dart';
 import 'app_route.dart';
 
 class AppScreens {
@@ -34,7 +37,11 @@ class AppScreens {
     GetPage(name: AppRoutes.forgetPassScreen, page: () =>   ForgetPassword()),
     GetPage(name: AppRoutes.changePassScreen, page: () =>   ChangePasswordScreen()),
     GetPage(name: AppRoutes.updateProfileScreen, page: () =>   UpdateProfileScreen()),
+    GetPage(name: AppRoutes.profileScreen, page: () =>   ProfileScreen()),
+    GetPage(name: AppRoutes.walletScreen, page: () =>   WalletScreen()),
     GetPage(name: AppRoutes.termsScreen, page: () =>   TermsScreen()),
+    GetPage(name: AppRoutes.settingScreen, page: () =>   SettingScreen()),
     GetPage(name: AppRoutes.notificationsScreen, page: () =>   NotificationsScreen()),
+    GetPage(name: AppRoutes.helpScreen, page: () =>   HelpScreen()),
   ];
 }

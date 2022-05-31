@@ -43,6 +43,7 @@ dependencies:
   show_up_animation: ^2.0.0
   animated_splash_screen: ^1.2.0
   flutter_spinkit:
+  flutter_svg: ^1.0.3
   dio:
   rflutter_alert: ^2.0.4
   auto_size_text:
