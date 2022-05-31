@@ -22,7 +22,7 @@ class ReservationsScreen extends StatelessWidget {
       length: 2,
       child: Scaffold(
           extendBodyBehindAppBar: true,
-          backgroundColor: Colors.transparent,
+
           appBar: AppBar(
             elevation: 0,
             backgroundColor: Colors.transparent,

@@ -30,7 +30,7 @@ class CarsCard extends StatelessWidget {
         color: K.whiteColor,
         child: Container(
           width: K.width,
-          // height: 123.h,
+           height: 123.h,
           child: Directionality(
               textDirection: TextDirection.rtl,
               child:  Row(
