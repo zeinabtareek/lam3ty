@@ -26,7 +26,7 @@ class CustomImage extends StatelessWidget {
       height: 250.h,
       child: Stack(
          children: [
-           LoginCustomText(
+          LoginCustomText(
                 text: text,
                  size: 28,
                 loginScreen: true,

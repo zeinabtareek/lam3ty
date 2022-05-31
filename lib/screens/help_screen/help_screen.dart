@@ -20,11 +20,9 @@ class HelpScreen extends StatelessWidget {
             left: 0,
             right: 0,
             child: CustomImageRow(
-              text: 'المساعده',
-              onPressed: () {
-                Get.back();
-              },
-            ),
+              text: 'الشروط والاحكام ',
+              onPressed: (){Get.back();},
+              widget:IconButton( onPressed: (){Get.back();}, icon: Icon(Icons.arrow_forward,size: 35.sp,)),),
           ),
           Positioned.fill(
             top: 120,

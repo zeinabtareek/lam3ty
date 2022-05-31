@@ -27,10 +27,8 @@ class SettingScreen extends StatelessWidget {
             right: 0,
             child: CustomImageRow(
               text: 'الاعدادات ',
-              onPressed: () {
-                Get.back();
-              },
-            ),
+                onPressed: (){Get.back();},
+              widget:IconButton( onPressed: (){Get.back();}, icon: Icon(Icons.arrow_forward,size: 35.sp,)),),
           ),
           Positioned.fill(
             top: 120,

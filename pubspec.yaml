@@ -47,6 +47,12 @@ dependencies:
   dio:
   rflutter_alert: ^2.0.4
   auto_size_text:
+  connectivity_plus:
+  cached_network_image: ^3.2.1
+  octo_image: ^1.0.1
+
+
+
 
 
 dev_dependencies:

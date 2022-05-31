@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:get/get.dart';
 import '../constant.dart';
+import '../routes/app_route.dart';
 import 'animated_screens/animated_splash.dart';
 import 'home_navigation_bar/home.dart';
 
@@ -22,8 +23,7 @@ startTimer(){
     //   Get.offAll(const Home());
     // }
     // else{
-      Get.to(const OnboardingScreen());
-    // }
+    Get.offAndToNamed(AppRoutes.onboardScreen);    // }
    }
   );
 }

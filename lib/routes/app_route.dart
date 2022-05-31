@@ -15,8 +15,10 @@ class AppRoutes {
  static const changePassScreen = '/Change_Password_Screen';
  static const updateProfileScreen = '/Update_Profile_Screen';
  static const notificationsScreen = '/Notifications_Screen';
+ static const carsServiceScreen = '/Cars_Service_Screen';
  static const termsScreen = '/Terms_Screen';
  static const settingScreen = '/Setting_Screen';
+ static const servicesApproveScreen = '/Services_Approve_Screen';
  static const walletScreen = '/Wallet_Screen';
  static const helpScreen = '/Help_Screen';
 }

@@ -44,7 +44,7 @@ class LoginScreen extends StatelessWidget {
               text: 'دخول ',
               isLoggin: true,
               onPressed: () {
-                Get.offAll(LoginScreen());
+                Get.offNamed(AppRoutes.homeNave);
               },
             ),
             const Spacer(),
@@ -53,32 +53,12 @@ class LoginScreen extends StatelessWidget {
               leftLabel: "ليس لديك حساب ؟",
               rightLabel: "حساب جديد ",
               onTab: () {
-                Get.toNamed(AppRoutes.registerScreen);
+                Get.offNamed(AppRoutes.registerScreen);
               },
             ),
             K.sizedBoxH,
           ],
         ),
         );
-  }
-
-  getBoxShadow() {
-    return BoxDecoration(
-        borderRadius: BorderRadius.circular(5.0),
-        color: K.secmainColor.withOpacity(.5),
-        border: Border.all(color: K.whiteColor.withOpacity(.3)));
-  }
-
-  getInoutDecoration(hint) {
-    return InputDecoration(
-      enabledBorder: UnderlineInputBorder(borderSide: BorderSide.none),
-      focusedBorder: UnderlineInputBorder(
-        borderSide: BorderSide(color: K.whiteColor.withOpacity(.3)),
-      ),
-      hintText: hint,
-      hintStyle: TextStyle(fontSize: 20.0, color: K.whiteColor.withOpacity(.3)),
-      labelStyle: TextStyle(color: Colors.white),
-      contentPadding: EdgeInsets.only(left: 15.0, top: 16.0),
-    );
   }
 }

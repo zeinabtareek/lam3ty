@@ -65,10 +65,8 @@ class OtpScreen extends StatelessWidget {
                   text: 'تأكيد', size: K.width,
                   isLoggin: true,
                 ),
-
-
                 Center(
-                  child:   FixedRichText(
+                  child:FixedRichText(
                     key: key,
                     leftLabel: " لم يتم ارسال الرمز ؟",
                     rightLabel: "ارسال جديد ",

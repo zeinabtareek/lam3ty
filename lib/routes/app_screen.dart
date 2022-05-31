@@ -2,6 +2,8 @@
 import 'package:get/get.dart';
 
 import '../screens/animated_screens/animated_splash.dart';
+import '../screens/car_service_screen/car_service_screen.dart';
+import '../screens/car_service_screen/services_approve_screen.dart';
 import '../screens/cars_screen/cars_screen.dart';
 import '../screens/first_splash_screen/first_splash_screen.dart';
 import '../screens/forget_password_scrren/change_password.dart';
@@ -42,6 +44,8 @@ class AppScreens {
     GetPage(name: AppRoutes.termsScreen, page: () =>   TermsScreen()),
     GetPage(name: AppRoutes.settingScreen, page: () =>   SettingScreen()),
     GetPage(name: AppRoutes.notificationsScreen, page: () =>   NotificationsScreen()),
+    GetPage(name: AppRoutes.carsServiceScreen, page: () =>   CarsServiceScreen()),
+    GetPage(name: AppRoutes.servicesApproveScreen, page: () =>   ServicesApproveScreen()),
     GetPage(name: AppRoutes.helpScreen, page: () =>   HelpScreen()),
   ];
 }

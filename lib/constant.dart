@@ -15,9 +15,21 @@ class K {
   static final width = Get.width;
   static final height = Get.height;
 
+static  final boxDecoration= BoxDecoration(
+  border: Border.all(color: K.secmainColor,width: 2),
+  borderRadius: BorderRadius.circular(10),
+  );
 
 
-
+  static TextStyle textStyle16 =  TextStyle(
+    fontSize: 16.sp,
+    color: K.mainColor,
+    fontWeight: FontWeight.w600,
+  );  static TextStyle textStyle24=  TextStyle(
+    fontSize: 24.sp,
+    color: K.blackColor,
+    fontWeight: FontWeight.w600,
+  );
   static SizedBox sizedBoxH = SizedBox(
     height: 40.h,
   );

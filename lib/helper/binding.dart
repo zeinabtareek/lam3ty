@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
 
+import '../screens/car_service_screen/controller/car_services_controller.dart';
 import '../screens/cars_screen/controller/cars_controller.dart';
 import '../screens/controller.dart';
 import '../screens/home_navigation_bar/controller/home_controller.dart';
@@ -18,6 +19,7 @@ class Binding extends Bindings {
     Get.lazyPut(() => LoginController());
     Get.lazyPut(() => OtpController());
     Get.lazyPut(() => HomeController());
+    Get.lazyPut(() => CarServicesController());
     Get.lazyPut(() => RegisterController());
 
 

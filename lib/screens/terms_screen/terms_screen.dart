@@ -16,16 +16,15 @@ class TermsScreen extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: <Widget>[
+
           Positioned(
             top: 0,
             left: 0,
             right: 0,
             child: CustomImageRow(
-              text: 'الشروط والاحكام',
-              onPressed: () {
-                Get.back();
-              },
-            ),
+              text: 'الشروط والاحكام ',
+              onPressed: (){Get.back();},
+              widget:IconButton( onPressed: (){Get.back();}, icon: Icon(Icons.arrow_forward,size: 35.sp,)),),
           ),
           Positioned.fill(
             top: 120,

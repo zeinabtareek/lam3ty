@@ -26,7 +26,7 @@ class CustomRadioButton extends StatelessWidget {
           ),
           const Text('ذكر', style:   TextStyle(fontSize: 16.0),),
           Radio(
-              value: 'انثي',
+               value: 'انثي',
               groupValue:_controller.genderSelected.value,
               onChanged: (String? v){
                 _controller.isTappedFunc(v);

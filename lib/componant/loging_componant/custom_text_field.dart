@@ -13,8 +13,10 @@ class CustomTextField extends StatelessWidget {
   final TextEditingController? controller;
   final Function()? onTap;
   final bool? isPassword;
+  final bool? isNotes;
   final Color? errorColor;
   final Color? color;
+  final double? height;
   final Widget icon;
 
   CustomTextField(
@@ -27,13 +29,14 @@ class CustomTextField extends StatelessWidget {
       this.isPassword,
       this.errorColor,
       this.color,
-      required this.icon});
+      required this.icon,this.height,this.isNotes
+      });
 
   @override
   Widget build(BuildContext context) {
     return Container(
-        margin: EdgeInsets.symmetric(horizontal: 20.0.w, vertical: 0.0.h),
-        height: 60.h,
+        margin: EdgeInsets.symmetric(horizontal: isNotes==true?0.0.w:20.0.w, vertical: 0.0.h),
+        height: isNotes==true?height:60.h,
         width: double.infinity,
         decoration: getBoxShadow(),
         child: Row(
@@ -66,7 +69,7 @@ class CustomTextField extends StatelessWidget {
   getBoxShadow() {
     return BoxDecoration(
         borderRadius: BorderRadius.circular(5.0),
-        color: K.secmainColor.withOpacity(.7),
+        color: isNotes==true?K.whiteColor:K.secmainColor.withOpacity(.7),
         border: Border.all(color: K.borderColor.withOpacity(1)));
   }
 

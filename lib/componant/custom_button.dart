@@ -25,8 +25,7 @@ class Button extends StatelessWidget {
       width: K.width,
       margin:  EdgeInsets.symmetric
         (horizontal: 27.0.w ,vertical: 2.0.h) ,
-      color:Colors.transparent,
-
+      color:Colors.white,
       child:
       RaisedButton(
         onPressed:  onPressed,

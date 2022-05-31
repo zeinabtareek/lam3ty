@@ -26,11 +26,9 @@ class ProfileScreen extends StatelessWidget {
             left: 0,
             right: 0,
             child: CustomImageRow(
-              text: 'الملف الشخصي',
-              onPressed: () {
-                Get.back();
-              },
-            ),
+              text: 'الملف الشخصي ',
+              onPressed: (){Get.back();},
+              widget:IconButton( onPressed: (){Get.back();}, icon: Icon(Icons.arrow_forward,size: 35.sp,)),),
           ),
           Positioned.fill(
             top: 120,
@@ -99,7 +97,7 @@ class ProfileScreen extends StatelessWidget {
                                 } else if (index == 1) {
                                   Get.toNamed(AppRoutes.settingScreen);
                                 } else if (index == 2) {
-                                  // Get.to(AddressScreen());
+                                  Get.toNamed(AppRoutes.helpScreen);
                                 } else if (index == 3) {
                                   Get.toNamed(AppRoutes.registerScreen);
                                 } else if (index == 4) {

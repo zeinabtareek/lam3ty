@@ -7,6 +7,7 @@ class RegisterController extends GetxController {
   final _pass = ''.obs;
   String get pass => _pass.value;
  final genderSelected=''.obs;
+
  final agree=''.obs;
 
    List<String> allItems = [
