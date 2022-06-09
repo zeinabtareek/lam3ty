@@ -21,7 +21,6 @@ class CarsServiceScreen extends StatelessWidget {
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: MyAppBar(text: 'خدمات السياره',),
-
       body: Stack(
         children: [
           Positioned(
@@ -171,9 +170,7 @@ class CarsServiceScreen extends StatelessWidget {
                                       fontSize: 14.sp,color: K.mainColor
                                     ), 'هنا يتم وصف المنتج هنا يتم وصف المنتج هنا يتم وصف المنتجهنا يتم وصف المنتجهنا يتم وصف المنتج'),
 
-
                                   )
-
                                 ],
                               ),
                             ),

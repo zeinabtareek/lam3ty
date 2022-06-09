@@ -18,38 +18,54 @@ class ChangePasswordScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: K.whiteColor,
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
+      body: Stack(
         children: [
-          CustomImage(
-            text: '  ',
-            isLoginScreen: false,
-          ),
-        Spacer(),
-        Column(
+          Positioned(
+              top: 0,
+              left: 0,
+              right: 0,
+              child: CustomImage(text: '', isLoginScreen: false)),
+          Positioned(
+            top: 300,
+            right: 0,
+            left: 0,
+            child: Column(
               mainAxisAlignment: MainAxisAlignment.end,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Image.asset('assets/images/done.png' ,fit: BoxFit.contain,
+                Image.asset(
+                  'assets/images/done.png',
+                  fit: BoxFit.contain,
                   alignment: Alignment.bottomCenter,
-                  width: 100,height: 100,),
-                AutoSizeText('تم تغيير كلمه المرور بنجاح',style: TextStyle(fontSize: 20.sp,fontWeight: FontWeight.bold,color: K.TypeColor),),
+                  width: 100,
+                  height: 100,
+                ),
+                AutoSizeText(
+                  'تم تغيير كلمه المرور بنجاح',
+                  style: TextStyle(
+                      fontSize: 20.sp,
+                      fontWeight: FontWeight.bold,
+                      color: K.TypeColor),
+                ),
               ],
             ),
-          const Spacer(),
-          Center(
-            child: FixedRichText(
-              key: key,
-              leftLabel: " ",
-              rightLabel: "تسجيل الدخول ",
-              isForgetPassScreen: true,
-              onTab: () {
-                Get.toNamed(AppRoutes.registerScreen);
-              },
+          ),
+          Positioned(
+            bottom: 30,
+            right: 0,
+            left: 0,
+            child: Center(
+              child: FixedRichText(
+                key: key,
+                leftLabel: " ",
+                rightLabel: "تسجيل الدخول ",
+                isForgetPassScreen: true,
+                onTab: () {
+                  Get.toNamed(AppRoutes.registerScreen);
+                },
+              ),
             ),
           ),
-          K.sizedBoxH,
         ],
       ),
     );
