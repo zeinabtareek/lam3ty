@@ -6,7 +6,7 @@ import 'package:get/get.dart';
 import 'package:lam3ty/componant/custom_vehical_color.dart';
 import 'package:lam3ty/componant/load_image.dart';
 
-import '../constant.dart';
+import '../constants/constant.dart';
 import 'custom_time_widget.dart';
 
 class CarsCard extends StatelessWidget {

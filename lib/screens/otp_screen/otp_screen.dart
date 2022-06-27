@@ -6,13 +6,14 @@ import '../../componant/custom_button.dart';
  import '../../componant/loging_componant/login_custom_text.dart';
 import '../../componant/loging_componant/rich_text.dart';
 import '../../componant/otp_input.dart';
-import '../../constant.dart';
+import '../../constants/constant.dart';
 import '../../routes/app_route.dart';
 import 'controller/otp_controller.dart';
 
 
 class OtpScreen extends StatelessWidget {
-  OtpScreen({Key? key, }) : super(key: key);
+  String phoneNo;
+  OtpScreen({Key? key, required this.phoneNo }) : super(key: key);
   OtpController controller =Get.put( OtpController());
   @override
   Widget build(BuildContext context) {
@@ -39,13 +40,21 @@ class OtpScreen extends StatelessWidget {
                     ),
                   ],
                 ),
+                  Center(
+                  child: Text(
+                    'الرجاء ادخال الكود المكون من 4 أرقام المستلم في الرسائل النصية\n الي الرقم (${phoneNo})',
+                    textAlign: TextAlign.center,
+                    style: const TextStyle(
+                      fontSize: 16,
+                      color: K.blackColor,
+                    ),
+                  ),
+                ),
                 K.sizedBoxH,
                   Text(controller.otp.value.isEmpty? 'الرجاء ادخال رمز التأكيد':
                  '  الرمز هو  ${ controller.otp.value}  ' ,),
-
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-
                   children: [
                     OtpInput(controller.fieldOne,  true, 60.h, 89.w,),
                     OtpInput(controller.fieldTwo, false, 60.h, 89.w,),
@@ -55,13 +64,20 @@ class OtpScreen extends StatelessWidget {
                 Spacer(),
                 Button(
                   controller: controller,
-                  onPressed: (){ controller.otp.value = controller.fieldOne.text +
+                  onPressed: (){
+                    controller.otp.value =
+                      controller.fieldOne.text +
                       controller.fieldTwo.text +
                       controller.fieldThree.text +
                       controller.fieldFour.text;
-                  Get.toNamed(AppRoutes.homeNave);
+                  // Get.toNamed(AppRoutes.homeNave);
+                    controller.otpVerfication();
+                    // controller.otpVerfication(controller.mobile, VerficationCode)
 
-                  print(controller.otp.value);},
+                  print(controller.otp.value);
+                  print(phoneNo.toString());
+                  },
+
                   text: 'تأكيد', size: K.width,
                   isLoggin: true,
                 ),
@@ -73,10 +89,8 @@ class OtpScreen extends StatelessWidget {
                     onTab: () {
                       Get.toNamed(AppRoutes.loginScreen);
                     },
-
                   ),
-                ),                Spacer(),
-
+                ),Spacer(),
               ],
             ),
         ),

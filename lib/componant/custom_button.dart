@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:lam3ty/screens/otp_screen/controller/otp_controller.dart';
 
-import '../constant.dart';
+import '../constants/constant.dart';
 
 class Button extends StatelessWidget {
  final String text;
@@ -14,7 +14,7 @@ class Button extends StatelessWidget {
     required this.text,
     required this.size,
       this.onPressed,
-    this.isLoggin,
+     this.isLoggin,
     Key? key,
      OtpController ?controller,
   }) : super(key: key);
@@ -29,6 +29,7 @@ class Button extends StatelessWidget {
       child:
       RaisedButton(
         onPressed:  onPressed,
+
         padding:const EdgeInsets.all(0),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
         color: isLoggin==true?K.mainColor:K.whiteColor,

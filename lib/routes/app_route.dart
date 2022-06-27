@@ -8,6 +8,7 @@ class AppRoutes {
   static const productDetailsScreen = '/Product_Details_Screen';
  static const profileScreen = '/Profile_Screen';
  static const otpScreen = '/Otp_Screen';
+ static const loadingScreen = '/Loading_Screen';
  static const carsScreen = '/Cars_Screen';
  static const reservationsScreen = '/Reservations_Screen';
  static const requestForgetPassScreen = '/Request_Forget_Password_Screen';

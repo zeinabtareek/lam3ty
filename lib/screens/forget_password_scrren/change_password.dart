@@ -7,7 +7,7 @@ import '../../componant/custom_image.dart';
 import '../../componant/custom_login_label.dart';
 import '../../componant/loging_componant/custom_text_field.dart';
 import '../../componant/loging_componant/rich_text.dart';
-import '../../constant.dart';
+import '../../constants/constant.dart';
 import '../../routes/app_route.dart';
 import '../login_screen/login_screen.dart';
 

@@ -4,7 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:octo_image/octo_image.dart';
 import 'package:flutter_blurhash/flutter_blurhash.dart';
 
-import '../constant.dart';
+import '../constants/constant.dart';
 
 class LoadImage extends StatelessWidget {
   final String? image;

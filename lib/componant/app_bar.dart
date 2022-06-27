@@ -4,7 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../constant.dart';
+import '../constants/constant.dart';
 
 class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
   String text;

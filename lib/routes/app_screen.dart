@@ -1,6 +1,7 @@
 
 import 'package:get/get.dart';
 
+import '../load_screen.dart';
 import '../screens/animated_screens/animated_splash.dart';
 import '../screens/car_service_screen/car_service_screen.dart';
 import '../screens/car_service_screen/services_approve_screen.dart';
@@ -29,7 +30,8 @@ class AppScreens {
     GetPage(name: AppRoutes.homeNave, page: () => const Home()),
     GetPage(name: AppRoutes.loginScreen, page: () => const LoginScreen()),
     GetPage(name: AppRoutes.registerScreen, page: () =>   RegisterScreen()),
-    GetPage(name: AppRoutes.otpScreen, page: () =>   OtpScreen()),
+    GetPage(name: AppRoutes.otpScreen, page: () =>   OtpScreen(phoneNo: '',)),
+    GetPage(name: AppRoutes.loadingScreen, page: () => LoadingScreen()),
     GetPage(name: AppRoutes.carsScreen, page: () =>   CarsScreen()),
     GetPage(name: AppRoutes.homeScreen, page: () => const HomeScreen()),
     GetPage(name: AppRoutes.onboardScreen, page: () => const OnboardingScreen()),

@@ -10,7 +10,7 @@ import '../../componant/custom_divider.dart';
 import '../../componant/custom_image.dart';
 import '../../componant/custom_time_widget.dart';
 import '../../componant/custom_vehical_color.dart';
-import '../../constant.dart';
+import '../../constants/constant.dart';
 import '../controller.dart';
 import 'controller/controller.dart';
 

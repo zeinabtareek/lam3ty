@@ -6,7 +6,7 @@ import '../../componant/custom_button.dart';
 import '../../componant/custom_image.dart';
 import '../../componant/custom_image_row.dart';
 import '../../componant/loging_componant/rich_text.dart';
-import '../../constant.dart';
+import '../../constants/constant.dart';
 import '../../routes/app_route.dart';
 
 class WalletScreen extends StatelessWidget {

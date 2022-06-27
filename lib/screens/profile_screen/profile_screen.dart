@@ -10,7 +10,7 @@ import '../../componant/custom_divider.dart';
 import '../../componant/custom_image_row.dart';
 import '../../componant/fixed_list_tile.dart';
 import '../../componant/notifications_list_tile.dart';
-import '../../constant.dart';
+import '../../constants/constant.dart';
 import '../../routes/app_route.dart';
 
 class ProfileScreen extends StatelessWidget {

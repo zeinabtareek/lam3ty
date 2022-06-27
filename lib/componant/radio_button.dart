@@ -16,7 +16,6 @@ class CustomRadioButton extends StatelessWidget {
     return Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-
           Radio(
               value: 'ذكر',
               groupValue:_controller.genderSelected.value,

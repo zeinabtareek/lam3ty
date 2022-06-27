@@ -3,27 +3,25 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:get/get.dart';
-import '../constants/constant.dart';
-import '../routes/app_route.dart';
-import 'animated_screens/animated_splash.dart';
-import 'home_navigation_bar/home.dart';
-
-
+import 'package:lam3ty/screens/home_navigation_bar/home.dart';
+import 'package:lam3ty/screens/register_screen/register_screen.dart';
+import 'constants/constant.dart';
+import '../helper/cache_helper.dart';
 
 class LoadingScreen extends StatefulWidget {
   @override
   State<LoadingScreen> createState() => _LoadingScreenState();
 }
-
+dynamic token = CacheHelper.getData(key: 'token');
 startTimer(){
   Timer(Duration(seconds: 3), ()async
   {
-    // if( await services.auth.currentUser!=null){
-    //   // currentFirebaseUser=services.auth.currentUser;
-    //   Get.offAll(const Home());
-    // }
-    // else{
-    Get.offAndToNamed(AppRoutes.onboardScreen);    // }
+    if(token != null){
+      Get.offAll(const Home());
+    }
+    else{
+      Get.to(   RegisterScreen());
+    }
    }
   );
 }

@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -7,14 +9,15 @@ import '../../componant/custom_button.dart';
 import '../../componant/custom_divider.dart';
 import '../../componant/custom_image.dart';
 import '../../componant/loging_componant/custom_text_field.dart';
-import '../../constant.dart';
+import '../../constants/constant.dart';
 import '../../routes/app_route.dart';
+import '../../services/services/services_services.dart';
 import '../controller.dart';
 import 'controller/car_services_controller.dart';
 
 class CarsServiceScreen extends StatelessWidget {
   final controller = Get.put(CarServicesController());
-  final homePageController = Get.put(HomePageController());
+  // final homePageController = Get.put(HomePageController());
 
   @override
   Widget build(BuildContext context) {
@@ -103,16 +106,18 @@ class CarsServiceScreen extends StatelessWidget {
                       style:K.textStyle24,
                     ),
                     Obx(
-                      () => servicesCostRadioRow(
+                      () =>controller.isLoading.value?Center(child: CircularProgressIndicator(),):
+                      servicesCostRadioRow(
                         controller: controller,
-                        serviceName: 'غسيل عام',
+                        serviceName:controller.servicesModel.response![0].name.toString() ,
+                        // serviceName: 'غسيل عام',
                         serviceCost: '50',
                         radioValue: 'عام',
                         groupValue: controller.selectedValue1.value,
                         onChange: (String? v) {
                           controller.isTappedFunc1(v);
                         },
-                      ),
+                      )
                     ),
                     Text(
                       'خدمات اضافيه',
@@ -151,7 +156,7 @@ class CarsServiceScreen extends StatelessWidget {
                     ),
                     InkWell(
                       onTap: ()async {
-                        await homePageController.onBasicWaitingAlertPressed(
+                        await controller.onBasicWaitingAlertPressed(
                           context,
                           widgetContent: Container(
                             height: 200,
@@ -202,7 +207,8 @@ class CarsServiceScreen extends StatelessWidget {
                       text: 'استمرار ',
                       isLoggin: true,
                       onPressed: () {
-                        Get.toNamed(AppRoutes.servicesApproveScreen);
+                        // Get.toNamed(AppRoutes.servicesApproveScreen);
+                        controller.getServices() ;
                       },
                     ),
                   ],

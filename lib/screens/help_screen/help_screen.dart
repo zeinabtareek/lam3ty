@@ -4,7 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import '../../componant/custom_image_row.dart';
 import '../../componant/notifications_list_tile.dart';
-import '../../constant.dart';
+import '../../constants/constant.dart';
 import '../../data.dart';
 
 class HelpScreen extends StatelessWidget {

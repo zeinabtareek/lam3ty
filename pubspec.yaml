@@ -43,14 +43,16 @@ dependencies:
   show_up_animation: ^2.0.0
   animated_splash_screen: ^1.2.0
   flutter_spinkit:
+  fluttertoast: ^8.0.9
   flutter_svg: ^1.0.3
   dio:
   rflutter_alert: ^2.0.4
   auto_size_text:
   connectivity_plus:
   cached_network_image: ^3.2.1
+  shared_preferences:
   octo_image: ^1.0.1
-
+  http:
 
 
 

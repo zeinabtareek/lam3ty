@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
-import '../constant.dart';
+import '../constants/constant.dart';
 import '../screens/reservations_screen/controller/controller.dart';
 import 'cars_card.dart';
 import 'custom_divider.dart';

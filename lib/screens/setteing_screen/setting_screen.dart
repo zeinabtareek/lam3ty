@@ -11,7 +11,7 @@ import '../../componant/custom_divider.dart';
 import '../../componant/custom_image_row.dart';
 import '../../componant/fixed_list_tile.dart';
 import '../../componant/notifications_list_tile.dart';
-import '../../constant.dart';
+import '../../constants/constant.dart';
 
 class SettingScreen extends StatelessWidget {
   const SettingScreen({Key? key}) : super(key: key);

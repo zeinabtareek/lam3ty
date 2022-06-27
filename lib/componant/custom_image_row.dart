@@ -5,7 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:lam3ty/screens/home/home_screen.dart';
 import 'package:lam3ty/screens/load_screen.dart';
-import '../constant.dart';
+import '../constants/constant.dart';
 
 class CustomImageRow extends StatelessWidget {
   String text;

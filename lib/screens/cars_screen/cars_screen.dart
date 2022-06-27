@@ -9,7 +9,7 @@ import '../../componant/custom_image.dart';
 import '../../componant/custom_image_row.dart';
 import '../../componant/loging_componant/login_custom_text.dart';
 import '../../componant/loging_componant/rich_text.dart';
-import '../../constant.dart';
+import '../../constants/constant.dart';
 import '../../routes/app_route.dart';
 import '../login_screen/login_screen.dart';
 import 'controller/cars_controller.dart';

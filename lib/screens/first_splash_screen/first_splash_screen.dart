@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/src/extension_navigation.dart';
-import '../../constant.dart';
+import '../../constants/constant.dart';
 import '../animated_screens/animated_splash.dart';
 import '../load_screen.dart';
 

@@ -8,7 +8,7 @@ import '../../componant/animated_componant/dot.dart';
 import '../../componant/custom_button.dart';
 import '../../componant/custom_image.dart';
 import '../../componant/loging_componant/login_custom_text.dart';
-import '../../constant.dart';
+import '../../constants/constant.dart';
 import '../../model/splash_model.dart';
 import '../../routes/app_route.dart';
 import '../login_screen/login_screen.dart';

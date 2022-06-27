@@ -2,7 +2,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../constant.dart';
+import '../../constants/constant.dart';
 
 class FixedRichText extends StatelessWidget {
   // LoginFixedRichText

@@ -3,11 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../constant.dart';
+import '../../constants/constant.dart';
 
 class CustomTextField extends StatelessWidget {
   final String? label;
-  final Function(String value)? onChanged;
+  final Function(String)? onchange;
   final String? errorLabel;
   final TextInputType? type;
   final TextEditingController? controller;
@@ -18,10 +18,12 @@ class CustomTextField extends StatelessWidget {
   final Color? color;
   final double? height;
   final Widget icon;
+  final   List<TextInputFormatter>?inputFormatters;
+
 
   CustomTextField(
       {this.label,
-      this.onChanged,
+        this.onchange,
       this.errorLabel,
       this.type,
       this.controller,
@@ -29,7 +31,7 @@ class CustomTextField extends StatelessWidget {
       this.isPassword,
       this.errorColor,
       this.color,
-      required this.icon,this.height,this.isNotes
+      required this.icon,this.height,this.isNotes, this.inputFormatters
       });
 
   @override
@@ -45,7 +47,9 @@ class CustomTextField extends StatelessWidget {
             children: [
               Expanded(
                 child: TextFormField(
+                  onChanged: onchange,
                   keyboardType: type,
+                  inputFormatters: inputFormatters,
                   textCapitalization: TextCapitalization.words,
                   cursorColor: K.mainColor,
                   style: TextStyle(color: K.mainColor),
@@ -57,13 +61,12 @@ class CustomTextField extends StatelessWidget {
                       onPressed: onTap,
                     ),
                   ),
-                  onChanged: (value) {
-                    print(value);
-                  },
                   obscureText: isPassword ?? true,
                 ),
               ),
-            ]));
+            ],
+        ),
+    );
   }
 
   getBoxShadow() {
@@ -77,7 +80,7 @@ class CustomTextField extends StatelessWidget {
     return InputDecoration(
       enabledBorder: const UnderlineInputBorder(borderSide: BorderSide.none),
       focusedBorder: const UnderlineInputBorder(borderSide: BorderSide.none),
-      contentPadding: EdgeInsets.only(left: 15.0.w, top: 0.0, bottom: 20.h),
+      contentPadding: EdgeInsets.only(left: 15.0.w, top: 0.0, bottom: 10.h),
     );
   }
 }

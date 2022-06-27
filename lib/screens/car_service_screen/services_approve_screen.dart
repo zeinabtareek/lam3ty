@@ -10,7 +10,7 @@ import '../../componant/car_data_details.dart';
 import '../../componant/cars_card.dart';
 import '../../componant/custom_button.dart';
 import '../../componant/custom_image.dart';
-import '../../constant.dart';
+import '../../constants/constant.dart';
 import '../../routes/app_route.dart';
 import '../controller.dart';
 
