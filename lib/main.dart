@@ -20,7 +20,17 @@ class MyHttpoverrides extends HttpOverrides{
   }
 }
 
+
+
 Future<void> main() async {
+  int x= 5 ;
+  int ? y; // maybe = nullGetBuilder
+  late int xx;
+   print(y!);
+   xx=55;
+
+
+
   HttpOverrides.global=  MyHttpoverrides();
   WidgetsFlutterBinding.ensureInitialized();
   DioUtilNew.getInstance();
@@ -37,13 +47,14 @@ class MyApp extends StatelessWidget {
     ]);
     return
       MediaQuery(
-        data:  MediaQueryData(),
+        data: MediaQueryData(),
         child:  ScreenUtilInit(
           designSize: new Size(428, 926),
-          builder: (BuildContext, Widget ) => GetMaterialApp(
+          builder: (BuildContext, Widget ) =>
+              GetMaterialApp(
             debugShowCheckedModeBanner: false,
-            theme: ThemeData(  ),
-            initialRoute: AppRoutes.registerScreen,
+            theme: ThemeData( ),
+            initialRoute: AppRoutes.splashScreen,
             getPages: AppScreens.screens,
           ),
         ),

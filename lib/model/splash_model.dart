@@ -5,7 +5,5 @@ class OnboardingModel {
   final String ?title;
   final String ?subtitle;
 
-
-
   OnboardingModel(this.image, this.title, this.subtitle,   );
 }

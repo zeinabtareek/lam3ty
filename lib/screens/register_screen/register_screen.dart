@@ -100,7 +100,9 @@ class RegisterScreen extends StatelessWidget {
                           CustomTextField(
                               type: TextInputType.phone,
                             inputFormatters: [
-                              FilteringTextInputFormatter.digitsOnly
+                              FilteringTextInputFormatter.digitsOnly,
+                              LengthLimitingTextInputFormatter(1),
+
                             ],
                             icon: Icon(null),
                             isPassword: false,
@@ -182,23 +184,4 @@ class RegisterScreen extends StatelessWidget {
     );
   }
 
-  getBoxShadow() {
-    return BoxDecoration(
-        borderRadius: BorderRadius.circular(5.0),
-        color: K.secmainColor.withOpacity(1),
-        border: Border.all(color: K.whiteColor.withOpacity(.3)));
-  }
-
-  getInoutDecoration(hint) {
-    return InputDecoration(
-      enabledBorder: UnderlineInputBorder(borderSide: BorderSide.none),
-      focusedBorder: UnderlineInputBorder(
-        borderSide: BorderSide(color: K.whiteColor.withOpacity(1)),
-      ),
-      hintText: hint,
-      hintStyle: TextStyle(fontSize: 20.0, color: K.whiteColor.withOpacity(.3)),
-      labelStyle: TextStyle(color: Colors.white),
-      contentPadding: EdgeInsets.only(left: 15.0, top: 16.0),
-    );
-  }
 }

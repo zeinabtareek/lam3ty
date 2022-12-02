@@ -72,8 +72,7 @@ class RegisterController extends GetxController {
             textColor: K.whiteColor,
             fontSize: 12.0);
       }
-      else
-        if (!email.contains('@')) {
+      else if (!email.contains('@')) {
         Fluttertoast.showToast(
             msg: "Email address is not valid",
             toastLength: Toast.LENGTH_SHORT,

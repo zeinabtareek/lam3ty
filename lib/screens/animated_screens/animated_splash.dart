@@ -6,12 +6,10 @@ import 'package:get/get_core/src/get_main.dart';
 import '../../componant/animated_componant/data.dart';
 import '../../componant/animated_componant/dot.dart';
 import '../../componant/custom_button.dart';
-import '../../componant/custom_image.dart';
 import '../../componant/loging_componant/login_custom_text.dart';
 import '../../constants/constant.dart';
 import '../../model/splash_model.dart';
 import '../../routes/app_route.dart';
-import '../login_screen/login_screen.dart';
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({Key? key}) : super(key: key);
@@ -43,7 +41,6 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     image:  DecorationImage(
                       image:  AssetImage("assets/images/Vector.png",),
                       fit: BoxFit.fitWidth,),
-
                 ),
               ),
             ),
@@ -130,9 +127,10 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                   InkWell(
                                     onTap: (){
                                       setState(() {});
-                                      _currentIndex !=2? _pageController.animateToPage(_currentIndex=_currentIndex+1, duration: Duration(milliseconds: 300),
+                                      _currentIndex !=2? _pageController.animateToPage(
+                                        _currentIndex=_currentIndex+1, duration: Duration(milliseconds: 300),
                                         curve: Curves.easeIn,)
-                                          :Get.offAndToNamed(AppRoutes.loginScreen);
+                                          : Get.offAndToNamed(AppRoutes.loginScreen);
                                     },
                                     child: Text(
                                       'التالي',

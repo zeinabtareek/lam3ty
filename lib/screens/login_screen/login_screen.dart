@@ -39,8 +39,7 @@ class LoginScreen extends StatelessWidget {
               isPassword: true,
             ),
             K.sizedBoxH,
-            Button(
-              size: K.width,
+            Button(size: K.width,
               text: 'دخول ',
               isLoggin: true,
               onPressed: () {

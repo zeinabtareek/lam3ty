@@ -10,7 +10,7 @@ import '../../../helper/dio_integration.dart';
 
 // class AuthServices {
   final dio = DioUtilNew.dio;
-//   Data data =Data();
+  // Data data =Data();
 //   login(String email, String password) async {
 //     try {
 //       final response = await dio?.post('login', data: {

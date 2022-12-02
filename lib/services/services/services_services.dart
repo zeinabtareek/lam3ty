@@ -19,8 +19,8 @@ class Services implements CarServicesRepo{
       final response = await dio.get(ConstantsURL.getServicesURLTail);
        print(response.data);
        return ServicesModel.fromJson(response.data);
-    }
-    catch (e) {
+     }
+     catch (e) {
       print(e);
     }
   }

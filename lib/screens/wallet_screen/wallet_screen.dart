@@ -42,8 +42,6 @@ class WalletScreen extends StatelessWidget {
                      const Text('الرصيد المتاح',style: TextStyle(fontSize: 35,fontWeight: FontWeight.bold,color: K.TypeColor),),
                      const Text(' 50 رس',style: TextStyle(fontSize: 35,fontWeight: FontWeight.bold,color: K.mainColor,),textDirection: TextDirection.rtl,),
                      const Spacer(),
-
-
                   ],
                 ),
               ),

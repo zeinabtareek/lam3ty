@@ -5,8 +5,6 @@ List<OnboardingModel> tabs = [
     'assets/images/first_slider.png',
     ' رعاية حقيقيه نتائج موثوقة',
     'اتصل بجهات الاتصال الخاصة بك في التطبيق مجانًا. أفضل جودة اتصال.',
-
-
   ),
 
   OnboardingModel(

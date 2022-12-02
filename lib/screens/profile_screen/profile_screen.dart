@@ -31,7 +31,7 @@ class ProfileScreen extends StatelessWidget {
               widget:IconButton( onPressed: (){Get.back();}, icon: Icon(Icons.arrow_forward,size: 35.sp,)),),
           ),
           Positioned.fill(
-            top: 120,
+            top: 120 ,
             left: 0,
             right: 0,
             child: SingleChildScrollView(
